@@ -1,1 +1,116 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-alarmapallete: (
+  50 : #f0f9f2,
+  100 : #daf0e0,
+  200 : #c2e7cb,
+  300 : #a9ddb6,
+  400 : #96d5a6,
+  500 : #84ce96,
+  600 : #7cc98e,
+  700 : #71c283,
+  800 : #67bc79,
+  900 : #54b068,
+  A100 : #ffffff,
+  A200 : #e0ffe7,
+  A400 : #adffbe,
+  A700 : #94ffaa,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-alarmapalletesecundario: (
+  50 : #f3f3f9,
+  100 : #e0e2f1,
+  200 : #cccfe7,
+  300 : #b8bcdd,
+  400 : #a8add6,
+  500 : #999fcf,
+  600 : #9197ca,
+  700 : #868dc3,
+  800 : #7c83bd,
+  900 : #6b72b2,
+  A100 : #ffffff,
+  A200 : #f6f7ff,
+  A400 : #c3c9ff,
+  A700 : #a9b2ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$app-web-primary: mat.define-palette($md-alarmapallete);
+$app-web-accent: mat.define-palette($md-alarmapalletesecundario, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$app-web-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$app-web-theme: mat.define-light-theme((
+  color: (
+    primary: $app-web-primary,
+    accent: $app-web-accent,
+    warn: $app-web-warn,
+  ),
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($app-web-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-button,
+.mat-flat-button,
+.mat-icon-button,
+.mat-stroked-button {
+	border-radius: 20px;
+}
