@@ -9,21 +9,27 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatCommonModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatListModule} from "@angular/material/list";
+import {HomeModule} from "./modules/home/home.module";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatDividerModule,
-    MatCommonModule,
-	  MatButtonModule
-  ],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatSidenavModule,
+		MatIconModule,
+		MatDividerModule,
+		MatCommonModule,
+		MatButtonModule,
+		MatToolbarModule,
+		MatListModule,
+		HomeModule
+	],
   providers: [],
   bootstrap: [AppComponent]
 })

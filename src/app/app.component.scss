@@ -1,0 +1,31 @@
+@import "../variables.scss";
+.app-container{
+	height: 100%;
+}
+.alarma-sidenav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+}
+.alarma-sidenav-content{
+	background-color: $background;
+	height: 100%;
+}
+.example-spacer {
+	flex: 1 1 auto;
+}
+
+.actived {
+	background-color: $accent;
+	border-radius: 30px !important;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	align-content: space-between;
+	justify-content: center;
+	margin: 50px auto;
+}
