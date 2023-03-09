@@ -9,13 +9,22 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatCommonModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
+import { CrearAlarmaComponent } from './crear-alarma/crear-alarma.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import {HomeModule} from "./modules/home/home.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CrearAlarmaComponent
   ],
 	imports: [
 		BrowserModule,
@@ -29,6 +38,13 @@ import {HomeModule} from "./modules/home/home.module";
 		MatToolbarModule,
 		MatListModule,
 		HomeModule
+		MatCardModule,
+	MatCheckboxModule,
+	MatSelectModule,
+	MatDatepickerModule,
+	MatNativeDateModule,
+	MatInputModule,
+	MatGridListModule
 	],
   providers: [],
   bootstrap: [AppComponent]
