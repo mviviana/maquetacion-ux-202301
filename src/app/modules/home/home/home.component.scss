@@ -1,0 +1,55 @@
+@import "../../../../variables.scss";
+
+
+.card-type-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-type{
+	font-size: 2em;
+	background-color: $primary;
+	border-radius: 50%;
+	padding: 10px 10px;
+	width: 60px;
+	height: 60px;
+	box-sizing: border-box;
+	text-align: center;
+
+}
+.card-type.medicamento{
+	background-color: $primary;
+}
+.card-type.cita{
+	background-color: $accent;
+}
+.title-card{
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+.subtitle-card{
+	font-size: 1em;
+}
+
+.card-actions{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.card-actions> mat-icon,
+.card-actions> mat-slide-toggle{
+	padding: 10px;
+	margin: 0 5px;
+
+
+
+}
+.card-actions> mat-icon{
+	background-color: #f6f7f8;
+	border-radius: 50%;
+}
+.card-actions> mat-icon:hover{
+	background-color: $accent;
+	cursor: pointer;
+}
