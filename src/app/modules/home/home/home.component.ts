@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 
+export interface AlarmModel{
+	title:String,
+	subtitle:String,
+	tipo:String,
+	active:boolean,
+	hora:String
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,4 +14,57 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+	 alarmas: AlarmModel[]=[];
+
+	 constructor() {
+		 this.alarmas=[
+			 {
+				 title:"Actaminofen",
+				 subtitle:"500 mg Tomar 2",
+				 tipo:"medicamento",
+				 active: true,
+				 hora:"80:00 AM"
+			 },
+			 {
+				 title:"Cardiologia",
+				 subtitle:"cada 2 meses",
+				 tipo:"cita",
+				 active: false,
+				 hora:"80:00 AM"
+			 },
+			  {
+				 title:"Optometria",
+				 subtitle:"Control medico cada año",
+				 tipo:"cita",
+				 active: false,
+				  hora:"10:00 AM"
+			 },
+			  {
+				 title:"Lozartan",
+				 subtitle:"500 mg Tomar 1",
+				 tipo:"medicamento",
+				 active: false,
+				  hora:"01:00 PM"
+			 },
+			  {
+				 title:"Actaminofen",
+				 subtitle:"500 mg Tomar 2",
+				 tipo:"medicamento",
+				 active: true,
+				  hora:"04:00 PM"
+			 },
+			  {
+				 title:"Actaminofen",
+				 subtitle:"500 mg Tomar 1",
+				 tipo:"medicamento",
+				 active: false,
+				  hora:"05:00 PM"
+			 },
+
+		 ]
+	 }
+
+	changeStatus(index:number, event:any){
+			let alarmModel = this.alarmas[index].active=event.checked
+	}
 }
