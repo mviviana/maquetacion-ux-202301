@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {DialogComponent} from "../dialog/dialog.component";
 
 export interface AlarmModel{
 	title:String,
@@ -16,7 +18,7 @@ export class HomeComponent {
 
 	 alarmas: AlarmModel[]=[];
 
-	 constructor() {
+	 constructor(public dialog: MatDialog ) {
 		 this.alarmas=[
 			 {
 				 title:"Actaminofen",
@@ -64,6 +66,13 @@ export class HomeComponent {
 		 ]
 	 }
 
+
+	openDialog(): void {
+		const dialogRef = this.dialog.open(DialogComponent, {
+		});
+
+		dialogRef.afterClosed();
+	}
 	changeStatus(index:number, event:any){
 			let alarmModel = this.alarmas[index].active=event.checked
 	}

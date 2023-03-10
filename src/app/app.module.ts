@@ -19,12 +19,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
-import { HomeModule } from './modules/home/home.module';
 import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento.component';
 import { FormsModule } from '@angular/forms';
+import { DialogComponent } from './dialog/dialog.component';
+import {HomeComponent} from "./home/home.component";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
-	declarations: [AppComponent, CrearAlarmaComponent, CrearMedicamentoComponent],
+	declarations: [AppComponent, CrearAlarmaComponent, CrearMedicamentoComponent, DialogComponent,HomeComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -36,7 +39,6 @@ import { FormsModule } from '@angular/forms';
 		MatButtonModule,
 		MatToolbarModule,
 		MatListModule,
-		HomeModule,
 		MatCardModule,
 		MatCheckboxModule,
 		MatSelectModule,
@@ -44,9 +46,12 @@ import { FormsModule } from '@angular/forms';
 		MatNativeDateModule,
 		MatInputModule,
 		MatGridListModule,
-		FormsModule
+		FormsModule,
+		MatSlideToggleModule,
+		MatDialogModule
+
 	],
-	providers: [],
+	providers: [MatDialogModule],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

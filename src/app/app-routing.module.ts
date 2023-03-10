@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from "./modules/home/home/home.component";
+import {HomeComponent} from "./home/home.component";
 import { CrearAlarmaComponent } from './crear-alarma/crear-alarma.component';
 import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento.component';
 
@@ -16,6 +16,10 @@ const routes: Routes = [
 	},
 	{
 		path: "crear-alarma",
+		component: CrearAlarmaComponent
+	},
+	{
+		path: "editar-alarma",
 		component: CrearAlarmaComponent
 	},
 	{

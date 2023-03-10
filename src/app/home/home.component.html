@@ -31,9 +31,8 @@
 					<div class="subtitle-card">{{alarma.subtitle}}</div>
 				</div>
 				<div class="col-3 card-actions">
-					<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
-					<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"
-							  color="warn"></mat-icon>
+					<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" routerLink="/editar-alarma"></mat-icon>
+					<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="warn" (click)="openDialog()"></mat-icon>
 					<mat-slide-toggle [checked]="alarma.active" (change)="changeStatus(i,$event)"></mat-slide-toggle>
 				</div>
 			</div>
