@@ -13,7 +13,6 @@ import { CrearAlarmaComponent } from './crear-alarma/crear-alarma.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -25,9 +24,12 @@ import { DialogComponent } from './dialog/dialog.component';
 import {HomeComponent} from "./home/home.component";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatDialogModule} from "@angular/material/dialog";
+import {RouteService} from "./route.service";
+import {EditarAlarmaComponent} from "./editar-alarma/editar-alarma.component";
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
-	declarations: [AppComponent, CrearAlarmaComponent, CrearMedicamentoComponent, DialogComponent,HomeComponent],
+	declarations: [AppComponent, CrearAlarmaComponent, CrearMedicamentoComponent, DialogComponent,HomeComponent,EditarAlarmaComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -48,10 +50,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 		MatGridListModule,
 		FormsModule,
 		MatSlideToggleModule,
-		MatDialogModule
+		MatDialogModule,
+		MatDatepickerModule
 
 	],
-	providers: [MatDialogModule],
+	providers: [MatDialogModule,RouteService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

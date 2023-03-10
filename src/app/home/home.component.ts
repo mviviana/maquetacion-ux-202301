@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
+import {RouteService} from "../route.service";
 
 export interface AlarmModel{
 	title:String,
@@ -18,7 +19,8 @@ export class HomeComponent {
 
 	 alarmas: AlarmModel[]=[];
 
-	 constructor(public dialog: MatDialog ) {
+	 constructor(public dialog: MatDialog ,routeService:RouteService) {
+		 routeService.title="Inicio"
 		 this.alarmas=[
 			 {
 				 title:"Actaminofen",

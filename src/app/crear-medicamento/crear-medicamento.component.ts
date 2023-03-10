@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RouteService} from "../route.service";
 
 @Component({
   selector: 'app-crear-medicamento',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./crear-medicamento.component.scss']
 })
 export class CrearMedicamentoComponent {
-
+constructor(routeService:RouteService) {
+	routeService.title="Crear medicamento"
+}
 }

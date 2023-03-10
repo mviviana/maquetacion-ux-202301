@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import { CrearAlarmaComponent } from './crear-alarma/crear-alarma.component';
 import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento.component';
+import {EditarAlarmaComponent} from "./editar-alarma/editar-alarma.component";
 
 const routes: Routes = [
 	{
@@ -20,7 +21,7 @@ const routes: Routes = [
 	},
 	{
 		path: "editar-alarma",
-		component: CrearAlarmaComponent
+		component: EditarAlarmaComponent
 	},
 	{
 		path: "crear-medicamento",

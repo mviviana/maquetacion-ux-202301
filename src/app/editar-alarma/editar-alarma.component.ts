@@ -3,12 +3,12 @@ import {RouteService} from "../route.service";
 
 @Component({
   selector: 'app-crear-alarma',
-  templateUrl: './crear-alarma.component.html',
-  styleUrls: ['./crear-alarma.component.scss']
+  templateUrl: './editar-alarma.component.html',
+  styleUrls: ['./editar-alarma.component.scss']
 })
-export class CrearAlarmaComponent {
+export class EditarAlarmaComponent {
 	medicamento = true;
 	constructor(routeService:RouteService) {
-		routeService.title="Crear alarma"
+		routeService.title="Editar alarma"
 	}
 }
