@@ -20,9 +20,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { HomeModule } from './modules/home/home.module';
+import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-	declarations: [AppComponent, CrearAlarmaComponent],
+	declarations: [AppComponent, CrearAlarmaComponent, CrearMedicamentoComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -42,6 +44,7 @@ import { HomeModule } from './modules/home/home.module';
 		MatNativeDateModule,
 		MatInputModule,
 		MatGridListModule,
+		FormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

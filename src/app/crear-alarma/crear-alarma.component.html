@@ -1,14 +1,18 @@
 <mat-card>
 	<section class="checkbox-med">
 		Medicamento
-		<mat-checkbox color="primary"> </mat-checkbox>
+		<mat-checkbox color="primary" [(ngModel)]="medicamento"> </mat-checkbox>
 	</section>
-	<mat-form-field appearance="outline">
+	<mat-form-field *ngIf="medicamento" appearance="outline">
 		<mat-label>Medicamento</mat-label>
 		<mat-select>
 			<mat-option>Acetaminofen 80 mg</mat-option>
 			<mat-option>Lozartan 250 mg</mat-option>
 		</mat-select>
+	</mat-form-field>
+	<mat-form-field appearance="outline" *ngIf="!medicamento">
+		<mat-label>Nombre del evento</mat-label>
+		<input type="text" matInput />
 	</mat-form-field>
 	<mat-form-field appearance="outline">
 		<mat-label>Seleccione la fecha</mat-label>
@@ -20,7 +24,7 @@
 		></mat-datepicker-toggle>
 		<mat-datepicker #picker></mat-datepicker>
 	</mat-form-field>
-	<mat-form-field appearance="outline">
+	<mat-form-field appearance="outline" *ngIf="medicamento">
 		<mat-label>Dosis</mat-label>
 		<mat-select>
 			<mat-option>Una cada vez</mat-option>
