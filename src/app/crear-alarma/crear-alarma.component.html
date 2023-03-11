@@ -6,8 +6,8 @@
 	<mat-form-field *ngIf="medicamento" appearance="outline">
 		<mat-label>Medicamento</mat-label>
 		<mat-select>
-			<mat-option>Acetaminofen 80 mg</mat-option>
-			<mat-option>Lozartan 250 mg</mat-option>
+			<mat-option value="acetaminofen">Acetaminofen 80 mg</mat-option>
+			<mat-option value="lozartan" >Lozartan 250 mg</mat-option>
 		</mat-select>
 	</mat-form-field>
 	<mat-form-field appearance="outline" *ngIf="!medicamento">
@@ -27,23 +27,23 @@
 	<mat-form-field appearance="outline" *ngIf="medicamento">
 		<mat-label>Dosis</mat-label>
 		<mat-select>
-			<mat-option>Una cada vez</mat-option>
-			<mat-option>Dos cada vez</mat-option>
+			<mat-option value="uno">Una cada vez</mat-option>
+			<mat-option value="dos">Dos cada vez</mat-option>
 		</mat-select>
 	</mat-form-field>
 	<mat-form-field appearance="outline">
 		<mat-label>Repetición</mat-label>
 		<mat-select>
-			<mat-option>Cada 8 horas</mat-option>
-			<mat-option>Cada 12 horas</mat-option>
+			<mat-option value="ocho">Cada 8 horas</mat-option>
+			<mat-option value="doce">Cada 12 horas</mat-option>
 		</mat-select>
 	</mat-form-field>
 	<mat-card class="mat-column">
 		<mat-form-field appearance="outline">
 			<mat-label>Tiene Fin</mat-label>
 			<mat-select>
-				<mat-option>Si</mat-option>
-				<mat-option>No</mat-option>
+				<mat-option value="si">Si</mat-option>
+				<mat-option value="no">No</mat-option>
 			</mat-select>
 		</mat-form-field>
 

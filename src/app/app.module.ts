@@ -19,7 +19,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento.component';
-import { FormsModule } from '@angular/forms';
 import { DialogComponent } from './dialog/dialog.component';
 import {HomeComponent} from "./home/home.component";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
@@ -27,6 +26,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {RouteService} from "./route.service";
 import {EditarAlarmaComponent} from "./editar-alarma/editar-alarma.component";
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
 	declarations: [AppComponent, CrearAlarmaComponent, CrearMedicamentoComponent, DialogComponent,HomeComponent,EditarAlarmaComponent],
@@ -51,8 +51,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 		FormsModule,
 		MatSlideToggleModule,
 		MatDialogModule,
-		MatDatepickerModule
-
+		MatDatepickerModule,
+		ReactiveFormsModule
 	],
 	providers: [MatDialogModule,RouteService],
 	bootstrap: [AppComponent],
