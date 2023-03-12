@@ -17,12 +17,11 @@
 }
 
 .mat-column {
-	flex-direction: row;
+	display: flex;
 	.mat-mdc-form-field {
 		width: 100%;
 	}
 }
-
 .actions {
 	display: flex;
 	padding: 8px;

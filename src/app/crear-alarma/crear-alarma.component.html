@@ -42,7 +42,7 @@
 			<mat-option value="doce">Cada 12 horas</mat-option>
 		</mat-select>
 	</mat-form-field>
-	<mat-card class="mat-column">
+	<div class="mat-column">
 		<mat-form-field appearance="outline">
 			<mat-label>Tiene Fin</mat-label>
 			<mat-hint>Seleccione si tiene fin</mat-hint>
@@ -62,9 +62,9 @@
 			></mat-datepicker-toggle>
 			<mat-datepicker #pickera></mat-datepicker>
 		</mat-form-field>
-	</mat-card>
-	<mat-card class="actions">
+	</div>
+	<div class="actions">
 		<button mat-raised-button color="accent" routerLink="/home">Cancelar</button>
 		<button mat-raised-button color="primary" routerLink="/home">Guardar</button>
-	</mat-card>
+	</div>
 </mat-card>
