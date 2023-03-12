@@ -12,12 +12,13 @@
 	}
 }
 
-.color-label{
+.color-label {
 	color: $accent;
 }
 
 mat-card {
 	padding-top: 6%;
+	border-radius: 12px;
 }
 .mat-mdc-form-field {
 	padding-left: 3%;
@@ -64,6 +65,10 @@ mat-icon {
 	cursor: pointer;
 }
 
-mat-icon:hover  {
-	background-color:  $accent;
+mat-icon:hover {
+	background-color: $accent;
+}
+
+mat-form-field {
+	margin-top: 1%;
 }

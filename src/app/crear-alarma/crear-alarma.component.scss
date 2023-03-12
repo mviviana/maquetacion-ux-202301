@@ -7,7 +7,7 @@
 	margin: 2%;
 }
 
-.mat-mdc-checkbox.mat-primary{
+.mat-mdc-checkbox.mat-primary {
 	--mdc-checkbox-selected-checkmark-color: #ffffff;
 }
 
@@ -34,4 +34,11 @@
 		min-width: 200px;
 		color: #ffffff;
 	}
+}
+
+mat-card {
+	border-radius: 12px;
+}
+mat-form-field {
+	margin-top: 1%;
 }
