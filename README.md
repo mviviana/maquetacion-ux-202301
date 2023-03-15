@@ -1,27 +1,32 @@
-# AppWeb
+# Doctor alarma [WEB]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+This application was made over Angular Framework
 
-## Development server
+# Getting started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+What do you need to run the app?
 
-## Code scaffolding
+- Node.js v 19 or above
+- Angular CLI 15.2.1 or above
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. ### Clone the repository
 
-## Build
+2. ### Install Angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[Angular CLI](https://github.com/angular/angular-cli)
 
-## Running unit tests
+2. ### Install packages
+```bash
+  npm install 
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. ### Run the web app
 
-## Running end-to-end tests
+```bash
+  ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Open the app 
+Open your browser on `http://localhost:4200/`
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
